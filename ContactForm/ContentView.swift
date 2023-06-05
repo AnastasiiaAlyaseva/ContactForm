@@ -2,6 +2,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    // TODO: move to viewModel
+    // TODO: firstName & lastName are required, show errors
     @State var firstName: String = ""
     @State var lastName: String = ""
     @State var replyTo: String = ""
@@ -10,7 +12,12 @@ struct ContentView: View {
     var body: some View {
         VStack {
             HeaderView()
-            FormView(firstName: $firstName, lastName: $lastName, replyTo: $replyTo, message: $message)
+            FormView(
+                firstName: $firstName,
+                lastName: $lastName,
+                replyTo: $replyTo,
+                message: $message
+            )
             ButtonView()
         }
         .padding()

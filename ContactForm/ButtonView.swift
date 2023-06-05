@@ -12,7 +12,7 @@ struct ButtonView: View {
             }) {
                 HStack{
                     Image(systemName: "paperplane")
-                    Text("Senf Form")
+                    Text("Send Form")
                 }
                 .padding()
                 .background(Color.green)
@@ -38,6 +38,8 @@ struct ButtonView: View {
             
             Spacer()
             
+            // TODO: make as button with action - native iOS share
+            // ex. https://jeevatamil.medium.com/how-to-create-share-sheet-uiactivityviewcontroller-in-swiftui-cef64b26f073
             Image(systemName: "square.and.arrow.up")
                 .font(.system(size: 30))
         }
