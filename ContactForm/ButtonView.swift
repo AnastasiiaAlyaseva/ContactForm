@@ -21,7 +21,7 @@ struct ButtonView: View {
             }
             .disabled(viewModel.firstName.isEmpty && viewModel.lastName.isEmpty)
             .alert("Form submitted", isPresented: $showingAlert) {}
-
+            
             Button(action: {
                 print("Product submitted")
                 showingAlert = true
@@ -40,11 +40,20 @@ struct ButtonView: View {
             
             Spacer()
             
-            // TODO: make as button with action - native iOS share
-            // ex. https://jeevatamil.medium.com/how-to-create-share-sheet-uiactivityviewcontroller-in-swiftui-cef64b26f073
-            Image(systemName: "square.and.arrow.up")
-                .font(.system(size: 30))
+            Button(action: actionSheet) {
+                Image(systemName: "square.and.arrow.up")
+                    .font(.system(size: 30))
+            }
+            .disabled(viewModel.firstName.isEmpty && viewModel.lastName.isEmpty)
         }
         .padding(.top, 50)
+    }
+    func actionSheet() {
+        guard let data = URL(string: "https://www.linkedin.com/") else { return }
+        let av = UIActivityViewController(activityItems: [data], applicationActivities: nil)
+        let scenes = UIApplication.shared.connectedScenes
+        let windowScenes = scenes.first as? UIWindowScene
+        let rootVC = windowScenes?.keyWindow?.rootViewController
+        rootVC?.present(av, animated: true, completion: nil)
     }
 }
