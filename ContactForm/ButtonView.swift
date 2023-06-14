@@ -48,9 +48,11 @@ struct ButtonView: View {
         }
         .padding(.top, 50)
     }
+    
     func actionSheet() {
-        guard let data = URL(string: "https://www.linkedin.com/") else { return }
-        let av = UIActivityViewController(activityItems: [data], applicationActivities: nil)
+        guard let data = URL(string: "https://www.linkedin.com/in/anastasiia-smirnova-alyaseva/") else { return }
+        let message : String = "Shared contact:\(viewModel.firstName) \(viewModel.lastName).\n \n My personal contact: "
+        let av = UIActivityViewController(activityItems: [message, data], applicationActivities: nil)
         let scenes = UIApplication.shared.connectedScenes
         let windowScenes = scenes.first as? UIWindowScene
         let rootVC = windowScenes?.keyWindow?.rootViewController
