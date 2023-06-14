@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ButtonView: View {
-    
+    @StateObject var viewModel : ContentViewModel
     @State private var showingAlert = false
     
     var body: some View {
@@ -19,8 +19,9 @@ struct ButtonView: View {
                 .foregroundColor(.white)
                 .cornerRadius(10)
             }
+            .disabled(viewModel.firstName.isEmpty && viewModel.lastName.isEmpty)
             .alert("Form submitted", isPresented: $showingAlert) {}
-            
+
             Button(action: {
                 print("Product submitted")
                 showingAlert = true
@@ -34,6 +35,7 @@ struct ButtonView: View {
                 .foregroundColor(.white)
                 .cornerRadius(10)
             }
+            .disabled(viewModel.firstName.isEmpty && viewModel.lastName.isEmpty)
             .alert("Product submitted", isPresented: $showingAlert) {}
             
             Spacer()
