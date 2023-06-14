@@ -2,23 +2,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    // TODO: move to viewModel
-    // TODO: firstName & lastName are required, show errors
-    @State var firstName: String = ""
-    @State var lastName: String = ""
-    @State var replyTo: String = ""
-    @State var message: String = ""
+    @StateObject private var viewModel = ContentViewModel()
     
     var body: some View {
         VStack {
             HeaderView()
             FormView(
-                firstName: $firstName,
-                lastName: $lastName,
-                replyTo: $replyTo,
-                message: $message
+                firstName: $viewModel.firstName,
+                lastName: $viewModel.lastName,
+                replyTo: $viewModel.replyTo,
+                message: $viewModel.message
             )
-            ButtonView()
+            ButtonView(viewModel: viewModel)
         }
         .padding()
         .background(Color.gray)
