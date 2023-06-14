@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B54CF3CF2A322C4B0012ED3F /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CF3CE2A322C4B0012ED3F /* ContentViewModel.swift */; };
 		B57CAA8F2A27705B0031A91C /* ContactFormApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CAA8E2A27705B0031A91C /* ContactFormApp.swift */; };
 		B57CAA912A27705B0031A91C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CAA902A27705B0031A91C /* ContentView.swift */; };
 		B57CAA932A27705C0031A91C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B57CAA922A27705C0031A91C /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B54CF3CE2A322C4B0012ED3F /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		B57CAA8B2A27705B0031A91C /* ContactForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57CAA8E2A27705B0031A91C /* ContactFormApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormApp.swift; sourceTree = "<group>"; };
 		B57CAA902A27705B0031A91C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				B57CAB992A2A82560031A91C /* Info.plist */,
 				B57CAA8E2A27705B0031A91C /* ContactFormApp.swift */,
 				B57CAA902A27705B0031A91C /* ContentView.swift */,
+				B54CF3CE2A322C4B0012ED3F /* ContentViewModel.swift */,
 				B57CAA9E2A2771D60031A91C /* HeaderView.swift */,
 				B57CAAA02A2772540031A91C /* FormView.swift */,
 				B57CAAA22A27739F0031A91C /* ButtonView.swift */,
@@ -150,6 +153,7 @@
 			files = (
 				B57CAAA12A2772540031A91C /* FormView.swift in Sources */,
 				B57CAA912A27705B0031A91C /* ContentView.swift in Sources */,
+				B54CF3CF2A322C4B0012ED3F /* ContentViewModel.swift in Sources */,
 				B57CAAA32A27739F0031A91C /* ButtonView.swift in Sources */,
 				B57CAA9F2A2771D60031A91C /* HeaderView.swift in Sources */,
 				B57CAA8F2A27705B0031A91C /* ContactFormApp.swift in Sources */,
